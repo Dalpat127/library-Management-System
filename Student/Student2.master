@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Student2.master.cs" Inherits="Student_Student2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            font-size: x-large;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 50px;
+            color: #800000;
+            background-color: #993399;
+            width: 981px;
+        }
+        .style5
+        {
+            padding-bottom:100px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        &nbsp;<table class="style1">
+            <tr>
+                <td>
+        <table class="style1">
+            <tr>
+                <td class="style2">
+                    <strong>&nbsp;Libarary Management System</strong></td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                        ForeColor="#990000" Orientation="Horizontal" StaticSubMenuIndent="10px" 
+                        style="font-weight: 700; font-size: x-large; background-color: #FFCC66;">
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <Items>
+                            <asp:MenuItem Text="Profile" Value="Profile" Target="new" 
+                                NavigateUrl="~/Student/Profile.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Search" Value="Search" Target="new" 
+                                NavigateUrl="~/Student/Search.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student/All_Book.aspx" Text="All Book" 
+                                Target="new">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student/My_Issued.aspx" Text="My Issue" Value="My Issue" 
+                                Target="new">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Student/Book_Request.aspx" Target="new" Text="Book Request" 
+                                Value="Book Request"></asp:MenuItem>
+                            <asp:MenuItem Text="Status" Value="Status" Target="new" 
+                                NavigateUrl="~/Student/Status.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/logout.aspx" Target="new" Text="Log out" 
+                                Value="Log out"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="25px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#FFCC66" HorizontalPadding="35px" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            </table>
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
